@@ -9,9 +9,7 @@ def rectangle_area(width, height):
         status = "Error: Dimensions must be non-negative."
 
     return area, status
-
-
-    print(status)
+print(status)
 
 
 # Example usage2:
