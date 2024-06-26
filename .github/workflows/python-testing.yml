@@ -1,0 +1,21 @@
+name: Python Unit tests
+
+on:
+  pull_request:
+    branches:
+      - main
+      - actions
+      
+jobs:
+  unit-testing:
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install pytest
+      - name: Run PyTest
+        run: pytest ./tests
