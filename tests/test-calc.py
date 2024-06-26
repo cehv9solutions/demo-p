@@ -1,39 +1,33 @@
-# Function to add two numbers
-def add(x, y):
-    return x + y
+# Assuming this is your test-calc.py file
 
-# Function to subtract two numbers
-def subtract(x, y):
-    return x - y
+# E302: Add an extra blank line here
+import unittest
 
-# Main function to run the calculator
-def main():
-    print("Simple Calculator")
 
-    while True:
-        print("Select operation:")
-        print("1. Add")
-        print("2. Subtract")
-        print("3. Exit")
+# E302: Add an extra blank line here
+class TestCalculator(unittest.TestCase):
 
-        choice = input("Enter choice (1/2/3): ")
+    # E305: Add an extra blank line here
+    def setUp(self):
+        pass
+    
+    # E305: Add an extra blank line here
+    def tearDown(self):
+        pass
+    
+    # E302: Add an extra blank line here
+    def test_add(self):
+        result = add(3, 5)
+        self.assertEqual(result, 8)
+    
+    # E302: Add an extra blank line here
+    def test_subtract(self):
+        result = subtract(10, 5)
+        self.assertEqual(result, 5)
+    
 
-        # Check if choice is one of the options
-        if choice in ('1', '2'):
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+# E302: Add an extra blank line here
+if __name__ == '__main__':
+    unittest.main()
 
-            if choice == '1':
-                print("Result:", add(num1, num2))
-            elif choice == '2':
-                print("Result:", subtract(num1, num2))
-        
-        elif choice == '3':
-            print("Exiting the program...")
-            break
-        
-        else:
-            print("Invalid Input")
-
-if __name__ == "__main__":
-    main()
+# W293: Remove any trailing whitespace after the last line
