@@ -3,9 +3,7 @@ name: Python Unit tests
 on:
   pull_request:
     branches:
-      - main
-      - actions
-      
+      - main      
 jobs:
   unit-testing:
     run-on: ubuntu-latest
