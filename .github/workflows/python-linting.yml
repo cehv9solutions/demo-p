@@ -1,6 +1,9 @@
 name: Python Linting
 
-on: [commit]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   linting:
