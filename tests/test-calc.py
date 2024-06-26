@@ -1,61 +1,39 @@
-# Global variables
-x = 9
-y = 7
-
 # Function to add two numbers
 def add(x, y):
     return x + y
-
 
 # Function to subtract two numbers
 def subtract(x, y):
     return x - y
 
-
-# Function to multiply two numbers
-def multiply(x, y):
-    return x * y
-
-
-# Function to divide two numbers
-def divide(x, y):
-    if y != 0:
-        return x / y
-    else:
-        return "Error: Division by zero"
-
-
-# Main program
+# Main function to run the calculator
 def main():
-    # Example numbers
-    num1 = 10
-    num2 = 5
-    
-    # Perform calculations with num1 and num2
-    result_add = add(num1, num2)
-    result_subtract = subtract(num1, num2)
-    result_multiply = multiply(num1, num2)
-    result_divide = divide(num1, num2)
-    
-    # Perform calculations with global variables x and y
-    global_add = add(x, y)
-    global_subtract = subtract(x, y)
-    global_multiply = multiply(x, y)
-    global_divide = divide(x, y)
-    
-    # Print results with num1 and num2
-    print(f"Calculations with num1 = {num1} and num2 = {num2}:")
-    print(f"{num1} + {num2} = {result_add}")
-    print(f"{num1} - {num2} = {result_subtract}")
-    print(f"{num1} * {num2} = {result_multiply}")
-    print(f"{num1} / {num2} = {result_divide}")
-    
-    # Print results with global variables x and y
-    print(f"\nCalculations with x = {x} and y = {y}:")
-    print(f"{x} + {y} = {global_add}")
-    print(f"{x} - {y} = {global_subtract}")
-    print(f"{x} * {y} = {global_multiply}")
-    print(f"{x} / {y} = {global_divide}")
+    print("Simple Calculator")
 
-# Run the main program
-main()
+    while True:
+        print("Select operation:")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Exit")
+
+        choice = input("Enter choice (1/2/3): ")
+
+        # Check if choice is one of the options
+        if choice in ('1', '2'):
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+            if choice == '1':
+                print("Result:", add(num1, num2))
+            elif choice == '2':
+                print("Result:", subtract(num1, num2))
+        
+        elif choice == '3':
+            print("Exiting the program...")
+            break
+        
+        else:
+            print("Invalid Input")
+
+if __name__ == "__main__":
+    main()
