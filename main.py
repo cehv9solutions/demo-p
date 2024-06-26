@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
+# Function to add two numbers
+def add(x, y):
+    return x + y
 
-def rectangle_area(width, height):
-    if width >= 0 and height >= 0:
-        area = width * height
-        status = "Area calculation successful."
-    else:
-        area = None
-        status = "Error: Dimensions must be non-negative."
-
-    return area, status
-print(status)
-
-
-# Example usage2:
+# Example usage:
+num1 = 5
+num2 = 3
+result = add(num1, num2)
+print(f"The sum of {num1} and {num2} is: {result}")
