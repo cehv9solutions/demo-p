@@ -10,13 +10,7 @@ def rectangle_area(width, height):
 
     return area, status
 
-# Example usage:
-width = 5
-height = 10
-area, status = rectangle_area(width, height)
-if area is not None:
-    print(f"{status} The area of the rectangle with width {width} and height {height} is {area}")
-else:
+
     print(status)
 
 
